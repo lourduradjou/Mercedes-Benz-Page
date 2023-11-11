@@ -1,0 +1,174 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-family: sans-serif;
+	color: white;
+}
+body {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(to right bottom, rgb(0, 0, 0),
+     rgb(174, 174, 183),
+     rgb(81, 81, 126),
+     rgb(147, 53, 53));
+	overflow: hidden;
+}
+.header {
+	margin: 20px;
+	display: flex;
+	justify-content: space-between;
+	animation: nav-bar 2s ease;
+}
+
+#head-tag {
+	border-bottom: 1px solid white;
+	animation: head-tag 2s ease;
+}
+@keyframes head-tag {
+	0% {
+		transform: translateX(-5%);
+	}
+}
+@keyframes nav-bar {
+	0% {
+		transform: translateY(-50%);
+	}
+}
+
+.logo{
+    width: 30px;
+    background-blend-mode: lighten;
+    margin-left: 10px;
+}
+nav li {
+	display: inline-block;
+	margin: 0px 10px;
+	list-style: none;
+	font-weight: 600;
+}
+
+nav li:hover {
+    color: rgba(100,100,100,.9);
+    transform: translateY(-2px);
+}
+
+nav li:active {
+    transform: scale(0.95);
+}
+
+.main-section {
+	width: 100%;
+	display: flex;
+}
+
+.main-content {
+	width: 50%;
+	margin-top: 8%;
+	margin-left: 5%;
+	text-align: left;
+}
+
+.main-content h2 {
+	font-size: 80px;
+	letter-spacing: 3px;
+	margin-bottom: 2%;
+}
+
+.main-content h3 {
+	width: 100%;
+	font-size: 20px;
+	margin-bottom: 3%;
+	font-family: 'Gill Sans', sans-serif;
+	letter-spacing: 1px;
+}
+
+.tag {
+	color: yellow;
+}
+
+button {
+	margin-right: 10px;
+	margin-top: 10px;
+	align-items: left;
+	background: #050862;
+	color: rgb(229, 226, 226);
+	font-size: 17px;
+	padding: 15px 30px;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	/* box-shadow: inset 5px 5px 12px rgba(255, 255, 255, 0.06), */
+		 /* inset -5px -5px 12px rgba(255, 255, 255, 0.06); */
+    letter-spacing: 2px;
+}
+
+button:hover {
+	background-color: rgb(135, 0, 0);
+	font-weight: 600;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+.image {
+	width: 50%;
+	margin-top: 8%;
+    z-index: -1;
+}
+
+.img {
+	width: 45rem;
+    animation: car 5s ease-in-out;
+}
+
+@keyframes car {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-220%);
+    }
+}
+@media screen and (max-width: 1200px) /*within this width it will adjust itself the screen for tablet */ {
+	.main-content {
+		width: 100%;
+		text-align: center;
+	}
+	.image {
+		width: 100%;
+		position: absolute;
+		bottom: -5%;
+		display: flex;
+		justify-content: center;
+	}
+	.img {
+		width: 30rem;
+	}
+}
+
+@media screen and (max-width: 576px) /*within this width it will adjust itself the screen for mobile */ {
+	.main-content {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 3%;
+	}
+	.main-content h2,
+	h3 {
+		margin-bottom: 5%;
+	}
+
+	.image {
+		width: 100%;
+		position: absolute;
+		bottom: -5%;
+		display: flex;
+		justify-content: center;
+	}
+	.img {
+		width: 20rem;
+	}
+}
